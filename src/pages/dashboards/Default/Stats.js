@@ -1,15 +1,22 @@
-import React from "react";
+import React, { forwardRef } from "react";
+import { NavLink } from "react-router-dom";
 import styled, { css } from "styled-components/macro";
 import { rgba } from "polished";
 
 import {
   Box,
   Card as MuiCard,
+  CardMedia,
   CardContent as MuiCardContent,
   Chip as MuiChip,
+  Divider as MuiDivider,
+  IconButton,
   Typography as MuiTypography,
 } from "@mui/material";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { spacing } from "@mui/system";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
 
 const Card = styled(MuiCard)`
   position: relative;
@@ -23,6 +30,8 @@ const Card = styled(MuiCard)`
       color: ${(props) => props.theme.palette.primary.main};
     `}
 `;
+
+const Divider = styled(MuiDivider)(spacing);
 
 const Typography = styled(MuiTypography)(spacing);
 
@@ -55,7 +64,6 @@ const Percentage = styled(MuiTypography)`
   span {
     color: ${(props) => props.percentagecolor};
     font-weight: ${(props) => props.theme.typography.fontWeightBold};
-    background: ${(props) => rgba(props.percentagecolor, 0.1)};
     padding: 2px;
     border-radius: 3px;
     margin-right: ${(props) => props.theme.spacing(2)};
@@ -84,38 +92,68 @@ const IllustrationImage = styled.img`
     display: block;
   }
 `;
+const Item = styled(Paper)(({ theme }) => ({
+  ...theme.typography.body2,
+  padding: theme.spacing(2),
+  textAlign: "center",
+  color: theme.palette.text.secondary,
+}));
+
+const CustomRouterLink = forwardRef((props, ref) => (
+  <div ref={ref}>
+    <NavLink {...props} />
+  </div>
+));
 
 const Stats = ({
-  title,
-  amount,
+  assessmentpic,
   chip,
+  href,
   percentagetext,
   percentagecolor,
+  title,
   illustration,
 }) => {
   return (
     <Card illustration={illustration}>
+      <CardMedia
+        component="img"
+        height="140"
+        image={assessmentpic}
+        alt="green iguana"
+      />
       <CardContent>
-        <Typography variant="h6" mb={4}>
+        <Typography variant="h5" mb={4}>
           {title}
         </Typography>
-        <Typography variant="h3" mb={3}>
-          <Box fontWeight="fontWeightRegular">{amount}</Box>
-        </Typography>
-        <Percentage
-          variant="subtitle2"
-          color="textSecondary"
-          percentagecolor={percentagecolor}
-          illustration={illustration}
-        >
-          <span>{percentagetext}</span> Since last month
-        </Percentage>
-        {!illustration && <Chip label={chip} />}
-      </CardContent>
 
-      {!!illustration && (
-        <IllustrationImage src={illustration} alt="Illustration" />
-      )}
+        <Chip label={chip} />
+        <Divider my={1} />
+        <Grid container spacing={0} direction="row"
+          justifyContent="center"
+          alignItems="center">
+          <Grid item xs={4}>
+            <Item component={CustomRouterLink} to="/pages/profile">
+              <IconButton aria-label="play/pause">
+                <PlayArrowIcon sx={{ height: 38, width: 38 }} />
+              </IconButton>
+            </Item>
+          </Grid>
+          <Grid item xs={6}></Grid>
+          <Grid item xs={2}>
+            <Item>
+              <Percentage
+                variant="subtitle2"
+                color="textSecondary"
+                percentagecolor={percentagecolor}
+                illustration={illustration}
+              >
+                <span>{percentagetext}</span>
+              </Percentage>
+            </Item>
+          </Grid>
+        </Grid>
+      </CardContent>
     </Card>
   );
 };

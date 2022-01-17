@@ -98,7 +98,7 @@ function NavbarMessagesDropdown() {
         <React.Fragment>
           <List disablePadding>
             <Message
-              title="Lucy Lavender"
+              title="Tom Liu"
               description="Nam pretium turpis et arcu. Duis arcu tortor."
               image="/static/img/avatars/avatar-1.jpg"
             />

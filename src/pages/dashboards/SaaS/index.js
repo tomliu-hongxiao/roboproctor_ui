@@ -34,7 +34,7 @@ function SaaS() {
             SaaS Dashboard
           </Typography>
           <Typography variant="subtitle1">
-            {t("Welcome back")}, Lucy! {t("We've missed you")}.{" "}
+            {t("Welcome back")}, Tom! {t("We've missed you")}.{" "}
             <span role="img" aria-label="Waving Hand Sign">
               👋
             </span>

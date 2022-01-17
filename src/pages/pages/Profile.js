@@ -119,7 +119,7 @@ function Details() {
         <Centered>
           <Avatar alt="Lucy Lavender" src="/static/img/avatars/avatar-1.jpg" />
           <Typography variant="body2" component="div" gutterBottom>
-            <Box fontWeight="fontWeightMedium">Lucy Lavender</Box>
+            <Box fontWeight="fontWeightMedium">Tom Liu</Box>
             <Box fontWeight="fontWeightRegular">Lead Developer</Box>
           </Typography>
 

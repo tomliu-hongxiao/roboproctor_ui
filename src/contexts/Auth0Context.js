@@ -97,7 +97,7 @@ function AuthProvider({ children }) {
     dispatch({ type: SIGN_OUT });
   };
 
-  const resetPassword = (email) => {};
+  const resetPassword = (email) => { };
 
   return (
     <AuthContext.Provider
@@ -108,7 +108,7 @@ function AuthProvider({ children }) {
           id: state?.user?.sub,
           avatar: state?.user?.picture,
           email: state?.user?.email,
-          displayName: "Lucy",
+          displayName: "Tom",
           role: "user",
         },
         signIn,

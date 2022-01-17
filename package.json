@@ -83,7 +83,6 @@
     "craco-alias": "^3.0.1",
     "eslint-config-prettier": "6.15.0",
     "eslint-plugin-prettier": "3.4.1",
-    "prettier": "2.5.1",
     "redux-devtools-extension": "2.13.9"
   },
   "resolutions": {

@@ -75,10 +75,10 @@ const BrandChip = styled(Chip)`
 const Sidebar = ({ items, showFooter = true, ...rest }) => {
   return (
     <Drawer variant="permanent" {...rest}>
-      <Brand component={NavLink} to="/">
+      <Brand component={NavLink} to="/private">
         <BrandIcon />{" "}
         <Box ml={1}>
-          Material App <BrandChip label="PRO" />
+          RoboProctor <BrandChip label="PRO" />
         </Box>
       </Brand>
       <SidebarNav items={items} />

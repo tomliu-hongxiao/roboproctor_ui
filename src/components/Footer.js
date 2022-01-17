@@ -64,7 +64,7 @@ function Footer() {
           <List>
             <ListItemButton>
               <ListItemText
-                primary={`© ${new Date().getFullYear()} - Material App`}
+                primary={`© ${new Date().getFullYear()} - RoboProctor`}
               />
             </ListItemButton>
           </List>

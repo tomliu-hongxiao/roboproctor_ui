@@ -36,8 +36,8 @@ const Button = styled(MuiButton)(spacing);
 const timeOut = (time) => new Promise((res) => setTimeout(res, time));
 
 const initialValues = {
-  firstName: "Lucy",
-  lastName: "Lavender",
+  firstName: "Tom",
+  lastName: "Liu",
   email: "lucylavender@gmail.com",
   password: "mypassword123",
   confirmPassword: "mypassword123",

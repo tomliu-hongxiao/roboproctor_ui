@@ -28,7 +28,7 @@ const FooterBadge = styled(Badge)`
   margin-right: ${(props) => props.theme.spacing(1)};
   span {
     background-color: ${(props) =>
-      props.theme.sidebar.footer.online.background};
+    props.theme.sidebar.footer.online.background};
     border: 1.5px solid ${(props) => props.theme.palette.common.white};
     height: 12px;
     width: 12px;
@@ -55,7 +55,7 @@ const SidebarFooter = ({ ...rest }) => {
             {/* Demo data */}
             {!user && (
               <Avatar
-                alt="Lucy Lavender"
+                alt="Tom Liu"
                 src="/static/img/avatars/avatar-1.jpg"
               />
             )}
@@ -66,8 +66,8 @@ const SidebarFooter = ({ ...rest }) => {
             <FooterText variant="body2">{user.displayName}</FooterText>
           )}
           {/* Demo data */}
-          {!user && <FooterText variant="body2">Lucy Lavender</FooterText>}
-          <FooterSubText variant="caption">UX Designer</FooterSubText>
+          {!user && <FooterText variant="body2">Tom Liu</FooterText>}
+          <FooterSubText variant="caption">A+ student</FooterSubText>
         </Grid>
       </Grid>
     </Footer>

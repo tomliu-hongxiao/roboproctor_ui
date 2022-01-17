@@ -1,4 +1,5 @@
 import * as React from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components/macro";
 import { Power } from "react-feather";
 import { useNavigate } from "react-router-dom";
@@ -56,7 +57,7 @@ function NavbarUserDropdown() {
         open={Boolean(anchorMenu)}
         onClose={closeMenu}
       >
-        <MenuItem onClick={closeMenu}>Profile</MenuItem>
+        <MenuItem onClick={closeMenu}><NavLink to="/pages/profile" />Profile</MenuItem>
         <MenuItem onClick={handleSignOut}>Sign out</MenuItem>
       </Menu>
     </React.Fragment>

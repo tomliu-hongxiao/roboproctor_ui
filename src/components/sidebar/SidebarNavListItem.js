@@ -35,7 +35,7 @@ const Item = styled(ListItemButton)`
   }
   &.${(props) => props.activeclassname} {
     background-color: ${(props) =>
-      darken(0.03, props.theme.sidebar.background)};
+    darken(0.03, props.theme.sidebar.background)};
     span {
       color: ${(props) => props.theme.sidebar.color};
     }
@@ -46,10 +46,10 @@ const Title = styled(ListItemText)`
   margin: 0;
   span {
     color: ${(props) =>
-      rgba(
-        props.theme.sidebar.color,
-        props.depth && props.depth > 0 ? 0.7 : 1
-      )};
+    rgba(
+      props.theme.sidebar.color,
+      props.depth && props.depth > 0 ? 0.7 : 1
+    )};
     font-size: ${(props) => props.theme.typography.body1.fontSize}px;
     padding: 0 ${(props) => props.theme.spacing(4)};
   }

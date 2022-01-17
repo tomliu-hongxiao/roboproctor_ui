@@ -37,8 +37,8 @@ function App() {
   return (
     <HelmetProvider>
       <Helmet
-        titleTemplate="%s | Material App"
-        defaultTitle="Material App - React Admin & Dashboard Template"
+        titleTemplate="%s | RoboProctor"
+        defaultTitle="RoboProctor"
       />
       <Provider store={store}>
         <StylesProvider jss={jss}>

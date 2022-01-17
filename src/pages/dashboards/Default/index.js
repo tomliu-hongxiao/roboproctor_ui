@@ -31,10 +31,10 @@ function Default() {
       <Grid justifyContent="space-between" container spacing={6}>
         <Grid item>
           <Typography variant="h3" gutterBottom>
-            Default Dashboard
+            Assessment Dashboard
           </Typography>
           <Typography variant="subtitle1">
-            {t("Welcome back")}, Lucy! {t("We've missed you")}.{" "}
+            {t("Welcome back")}, Tom! {t("We've missed you")}.{" "}
             <span role="img" aria-label="Waving Hand Sign">
               👋
             </span>
@@ -48,60 +48,80 @@ function Default() {
 
       <Divider my={6} />
 
+      <Typography variant="h6" gutterBottom>
+        Continue Previous:
+      </Typography>
+
+      <Grid container spacing={6}>
+        <Grid item xs={3}>
+          <Stats
+            title="Assessment 1"
+            assessmentpic="/static/img/assessment/assessment1.jpg"
+            chip="Today"
+            percentagetext="26%"
+            percentagecolor={green[500]}
+          />
+        </Grid>
+      </Grid>
+
+      <Divider my={6} />
+
+      <Typography variant="h6" gutterBottom>
+        Upcoming:
+      </Typography>
       <Grid container spacing={6}>
         <Grid item xs={12} sm={12} md={6} lg={3} xl>
           <Stats
-            title="Sales Today"
-            amount="2.532"
-            chip="Today"
-            percentagetext="+26%"
+            title="Assessment 2"
+            assessmentpic="/static/img/assessment/assessment2.png"
+            chip="2 days"
+            percentagetext="26%"
             percentagecolor={green[500]}
           />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={3} xl>
           <Stats
-            title="Visitors"
-            amount="170.212"
-            chip="Annual"
-            percentagetext="-14%"
+            title="Assessment 3"
+            assessmentpic="/static/img/assessment/assessment3.jpg"
+            chip="3 days"
+            percentagetext="0%"
             percentagecolor={red[500]}
           />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={3} xl>
           <Stats
-            title="Total Earnings"
-            amount="$ 24.300"
-            chip="Monthly"
+            title="Assessment 4"
+            assessmentpic="/static/img/assessment/assessment4.png"
+            chip="4 days"
             percentagetext="+18%"
             percentagecolor={green[500]}
           />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={3} xl>
           <Stats
-            title="Pending Orders"
-            amount="45"
-            chip="Yearly"
-            percentagetext="-9%"
+            title="Assessment 5"
+            assessmentpic="/static/img/assessment/assessment5.jpg"
+            chip="15 days"
+            percentagetext="0%"
             percentagecolor={red[500]}
-            illustration="/static/img/illustrations/waiting.png"
           />
         </Grid>
       </Grid>
+      <Divider my={6} />
+
+      <Typography variant="h6" gutterBottom>
+        Assessment Reports:
+      </Typography>
 
       <Grid container spacing={6}>
-        <Grid item xs={12} lg={8}>
-          <LineChart />
-        </Grid>
-        <Grid item xs={12} lg={4}>
-          <DoughnutChart />
-        </Grid>
-      </Grid>
-      <Grid container spacing={6}>
-        <Grid item xs={12} lg={4}>
-          <BarChart />
-        </Grid>
-        <Grid item xs={12} lg={8}>
-          <Table />
+        <Grid item xs={3}>
+          <Stats
+            title="Assessment 1 Report"
+            assessmentpic="/static/img/assessment/assessment1.jpg"
+            chip="Today"
+            percentagetext="100%"
+            percentagecolor={green[500]}
+          />
         </Grid>
       </Grid>
     </React.Fragment>
