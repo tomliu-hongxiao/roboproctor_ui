@@ -133,7 +133,7 @@ const Stats = ({
           justifyContent="center"
           alignItems="center">
           <Grid item xs={4}>
-            <Item component={CustomRouterLink} to="/pages/profile">
+            <Item component={CustomRouterLink} to="/assessment/preview">
               <IconButton aria-label="play/pause">
                 <PlayArrowIcon sx={{ height: 38, width: 38 }} />
               </IconButton>

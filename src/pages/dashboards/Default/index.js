@@ -55,7 +55,7 @@ function Default() {
       <Grid container spacing={6}>
         <Grid item xs={3}>
           <Stats
-            title="Assessment 1"
+            title="Intro to Physics II"
             assessmentpic="/static/img/assessment/assessment1.jpg"
             chip="Today"
             percentagetext="26%"

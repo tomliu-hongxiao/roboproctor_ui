@@ -36,6 +36,7 @@ import Pagination from "./pages/components/Pagination";
 import Progress from "./pages/components/Progress";
 import Snackbars from "./pages/components/Snackbars";
 import Tooltips from "./pages/components/Tooltips";
+import Submit from "./pages/modules/Assessment/Submit";
 
 // Form components
 import SelectionCtrls from "./pages/forms/SelectionControls";
@@ -54,6 +55,7 @@ import Pricing from "./pages/pages/Pricing";
 import Settings from "./pages/pages/Settings";
 import Projects from "./pages/pages/Projects";
 import Chat from "./pages/pages/Chat";
+import Assessment from "./pages/modules/Assessment/Assessment"; // Dashboard components
 
 // Table components
 import SimpleTable from "./pages/tables/SimpleTable";
@@ -111,6 +113,8 @@ const Chartjs = async(() => import("./pages/charts/Chartjs"));
 const GoogleMaps = async(() => import("./pages/maps/GoogleMaps"));
 const VectorMaps = async(() => import("./pages/maps/VectorMaps"));
 
+const Preview = async(() => import("./pages/modules/Assessment/Preview"));
+
 const routes = [
   {
     path: "/",
@@ -163,6 +167,38 @@ const routes = [
       {
         path: "blank",
         element: <Blank />,
+      },
+    ],
+  },
+  {
+    path: "assessments",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "current",
+        element: <div />,
+      },
+      {
+        path: "past",
+        element: <div>Past</div>,
+      },
+    ],
+  },
+  {
+    path: "assessment",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "preview",
+        element: <Preview />,
+      },
+      {
+        path: "inprogress",
+        element: <Assessment />,
+      },
+      {
+        path: "submit",
+        element: <Submit />,
       },
     ],
   },
