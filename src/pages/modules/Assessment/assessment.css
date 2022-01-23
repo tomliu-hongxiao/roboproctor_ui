@@ -1,0 +1,40 @@
+.webcam_container{
+    position:fixed;
+    top:3%;
+    right: -80%;
+    width:100%;
+    z-index:100;
+}
+@media (max-width: 1588px) {
+  .webcam_container{
+    position:fixed;
+    top:3%;
+    right: -75%;
+    width:100%;
+    z-index:100;
+  }
+}
+@media (max-width: 1278px) {
+  .webcam_container{
+    position:fixed;
+    top:3%;
+    right: -72%;
+    width:100%;
+    z-index:100;
+  }
+}
+@media (max-width: 1128px) {
+  .webcam_container{
+    position:fixed;
+    top:3%;
+    right: -70%;
+    width:100%;
+    z-index:100;
+  }
+}
+@media (max-width: 1085px) {
+  .webcam_container{
+    position:relative;
+    right: 0;
+  }
+}
