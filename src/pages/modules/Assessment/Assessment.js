@@ -10,7 +10,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import Editors from "../../forms/Editors";
-import { Grid, Typography, Stack, Divider, Button, Box } from "@mui/material";
+import { Grid, Typography, Stack, Divider, Button, Box, Container } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Countdown from "react-countdown";
 import Dialog from "@mui/material/Dialog";
@@ -18,11 +18,11 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-
+import "./assessment.css"
 const styles = makeStyles({
   image: {
     width: "50em",
-  },
+  }
 });
 
 const TopBar = (props) => {
@@ -45,7 +45,57 @@ const TopBar = (props) => {
     </Stack>
   );
 };
+const Webcam = (props) => {
+  const [playing, setPlaying] = useState(true);
 
+  const HEIGHT = 300;
+  const WIDTH = 300;
+
+  const startVideo = () => {
+    setPlaying(true);
+    navigator.getUserMedia(
+      {
+        video: true,
+      },
+      (stream) => {
+        let video = document.getElementsByClassName('app__videoFeed')[0];
+        if (video) {
+          video.srcObject = stream;
+        }
+      },
+      (err) => console.error(err)
+    );
+  };
+  useEffect(() => {
+    startVideo();
+  }, []);
+  const stopVideo = () => {
+    setPlaying(false);
+    let video = document.getElementsByClassName('app__videoFeed')[0];
+    video.srcObject.getTracks()[0].stop();
+  };
+
+  return (
+    <React.Fragment>
+      <div className="app__container">
+        <video
+          height={HEIGHT}
+          width={WIDTH}
+          muted
+          autoPlay
+          className="app__videoFeed"
+        ></video>
+      </div>
+      {/* <div className="app__input">
+        {playing ? (
+          <button onClick={stopVideo}>Stop</button>
+        ) : (
+          <button onClick={startVideo}>Start</button>
+        )}
+      </div> */}
+    </React.Fragment>
+  );
+}
 const SubmitDialog = (props) => {
   const [open, setOpen] = React.useState(false);
   const [fullWidth, setFullWidth] = React.useState(true);
@@ -60,6 +110,8 @@ const SubmitDialog = (props) => {
 
   const handleOK = () => {
     setOpen(false);
+    let video = document.getElementsByClassName('app__videoFeed')[0];
+    video.srcObject.getTracks()[0].stop();
     nav("/assessment/submit");
   };
 
@@ -114,6 +166,7 @@ function Assessment(props) {
   const classes = styles();
   const assessment = getAssessment(props.id);
   const questions = assessment.questions;
+
   return (
     <React.Fragment>
       <Grid container spacing={6}>
@@ -166,10 +219,14 @@ function Assessment(props) {
           }
           return null;
         })}
+
         <Grid item xs={6}>
           <SubmitDialog />
         </Grid>
       </Grid>
+      <div className="webcam_container">
+        <Webcam />
+      </div>
     </React.Fragment>
   );
 }

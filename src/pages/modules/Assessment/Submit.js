@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Clock from "../../components/Clock";
 import { Helmet } from "react-helmet-async";
 import { DUMMY_PREVIEW_DATA } from "./constants";
-
 import {
   Avatar as MuiAvatar,
   Box,
@@ -25,6 +24,7 @@ const styles = makeStyles({
     width: "40px",
   },
 });
+
 
 function Submit(props) {
   const data = DUMMY_PREVIEW_DATA;
