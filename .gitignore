@@ -1,6 +1,7 @@
 .env.example
 build
 .firebase
+.firebase/hosting.YnVpbGQ.cache
 # Logs
 logs
 *.log
