@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components/macro";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 
 import {
   Grid,
+  Button,
   Divider as MuiDivider,
   Typography as MuiTypography,
 } from "@mui/material";
@@ -24,6 +25,10 @@ const Typography = styled(MuiTypography)(spacing);
 
 function Default() {
   const { t } = useTranslation();
+  const [done, setDone] = useState(true);
+  const click = () => {
+    setDone(false)
+  }
 
   return (
     <React.Fragment>
@@ -55,7 +60,7 @@ function Default() {
       <Grid container spacing={6}>
         <Grid item xs={3}>
           <Stats
-            title="Intro to Physics II"
+            title="Intro to Physics I"
             assessmentpic="/static/img/assessment/assessment1.jpg"
             chip="Today"
             percentagetext="26%"
@@ -70,18 +75,18 @@ function Default() {
         Upcoming:
       </Typography>
       <Grid container spacing={6}>
-        <Grid item xs={12} sm={12} md={6} lg={3} xl>
+        {done && <Grid item xs={12} sm={12} md={6} lg={3} xl>
           <Stats
-            title="Assessment 2"
+            title="Intro to Physics II"
             assessmentpic="/static/img/assessment/assessment2.png"
             chip="2 days"
-            percentagetext="26%"
-            percentagecolor={green[500]}
+            percentagetext="0%"
+            percentagecolor={red[500]}
           />
-        </Grid>
+        </Grid>}
         <Grid item xs={12} sm={12} md={6} lg={3} xl>
           <Stats
-            title="Assessment 3"
+            title="Intro to Physics III"
             assessmentpic="/static/img/assessment/assessment3.jpg"
             chip="3 days"
             percentagetext="0%"
@@ -90,16 +95,16 @@ function Default() {
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={3} xl>
           <Stats
-            title="Assessment 4"
+            title="Intro to Stats I"
             assessmentpic="/static/img/assessment/assessment4.png"
             chip="4 days"
-            percentagetext="+18%"
-            percentagecolor={green[500]}
+            percentagetext="0%"
+            percentagecolor={red[500]}
           />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={3} xl>
           <Stats
-            title="Assessment 5"
+            title="Intro to Math I"
             assessmentpic="/static/img/assessment/assessment5.jpg"
             chip="15 days"
             percentagetext="0%"
@@ -116,7 +121,7 @@ function Default() {
       <Grid container spacing={6}>
         <Grid item xs={3}>
           <Stats
-            title="Assessment 1 Report"
+            title="Math I"
             assessmentpic="/static/img/assessment/assessment1.jpg"
             chip="Today"
             percentagetext="100%"
