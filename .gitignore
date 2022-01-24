@@ -1,6 +1,6 @@
 .env.example
 build
-
+.firebase
 # Logs
 logs
 *.log
