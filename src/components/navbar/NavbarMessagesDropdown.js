@@ -76,7 +76,7 @@ function NavbarMessagesDropdown() {
     <React.Fragment>
       <Tooltip title="Messages">
         <IconButton color="inherit" ref={ref} onClick={handleOpen} size="large">
-          <Indicator badgeContent={3}>
+          <Indicator badgeContent={2}>
             <MessageSquare />
           </Indicator>
         </IconButton>
@@ -92,24 +92,19 @@ function NavbarMessagesDropdown() {
       >
         <MessageHeader p={2}>
           <Typography variant="subtitle1" color="textPrimary">
-            3 New Messages
+            2 New Messages
           </Typography>
         </MessageHeader>
         <React.Fragment>
           <List disablePadding>
             <Message
-              title="Tom Liu"
-              description="Nam pretium turpis et arcu. Duis arcu tortor."
-              image="/static/img/avatars/avatar-1.jpg"
-            />
-            <Message
-              title="Remy Sharp"
-              description="Curabitur ligula sapien euismod vitae."
+              title="Charles Zhang"
+              description="Hi my name is Charles"
               image="/static/img/avatars/avatar-2.jpg"
             />
             <Message
-              title="Cassandra Mixon"
-              description="Pellentesque auctor neque nec urna."
+              title="Grace Liu"
+              description="Hi, my name is Grace"
               image="/static/img/avatars/avatar-3.jpg"
             />
           </List>

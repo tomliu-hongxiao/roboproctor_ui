@@ -129,105 +129,33 @@ const pagesSection = [
 ];
 
 const elementsSection = [
-  //   {
-  //     href: "/components",
-  //     icon: Grid,
-  //     title: "Components",
-  //     children: [
-  //       {
-  //         href: "/components/alerts",
-  //         title: "Alerts",
-  //       },
-  //       {
-  //         href: "/components/accordion",
-  //         title: "Accordion",
-  //       },
-  //       {
-  //         href: "/components/avatars",
-  //         title: "Avatars",
-  //       },
-  //       {
-  //         href: "/components/badges",
-  //         title: "Badges",
-  //       },
-  //       {
-  //         href: "/components/buttons",
-  //         title: "Buttons",
-  //       },
-  //       {
-  //         href: "/components/cards",
-  //         title: "Cards",
-  //       },
-  //       {
-  //         href: "/components/chips",
-  //         title: "Chips",
-  //       },
-  //       {
-  //         href: "/components/dialogs",
-  //         title: "Dialogs",
-  //       },
-  //       {
-  //         href: "/components/lists",
-  //         title: "Lists",
-  //       },
-  //       {
-  //         href: "/components/menus",
-  //         title: "Menus",
-  //       },
-  //       {
-  //         href: "/components/pagination",
-  //         title: "Pagination",
-  //       },
-  //       {
-  //         href: "/components/progress",
-  //         title: "Progress",
-  //       },
-  //       {
-  //         href: "/components/snackbars",
-  //         title: "Snackbars",
-  //       },
-  //       {
-  //         href: "/components/tooltips",
-  //         title: "Tooltips",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     href: "/charts",
-  //     icon: PieChart,
-  //     title: "Charts",
-  //   },
-  //   {
-  //     href: "/forms",
-  //     icon: CheckSquare,
-  //     title: "Forms",
-  //     children: [
-  //       {
-  //         href: "/forms/pickers",
-  //         title: "Pickers",
-  //       },
-  //       {
-  //         href: "/forms/selection-controls",
-  //         title: "Selection Controls",
-  //       },
-  //       {
-  //         href: "/forms/selects",
-  //         title: "Selects",
-  //       },
-  //       {
-  //         href: "/forms/text-fields",
-  //         title: "Text Fields",
-  //       },
-  //       {
-  //         href: "/forms/editors",
-  //         title: "Editors",
-  //       },
-  //       {
-  //         href: "/forms/formik",
-  //         title: "Formik",
-  //       },
-  //     ],
-  //   },
+  {
+    href: "/components",
+    icon: Grid,
+    title: "Physics",
+    children: [
+      {
+        href: "/components/alerts",
+        title: "Intro to Physics",
+      },
+    ],
+  },
+  {
+    href: "/charts",
+    icon: PieChart,
+    title: "Statiscs",
+  },
+  {
+    href: "/Math",
+    icon: CheckSquare,
+    title: "Math",
+    children: [
+      {
+        href: "/forms/pickers",
+        title: "Intro to Math",
+      },
+    ],
+  },
   //   {
   //     href: "/tables",
   //     icon: List,
@@ -298,10 +226,10 @@ const navItems = [
   //   title: "Pages",
   //   pages: pagesSection,
   // },
-  // {
-  //   title: "Elements",
-  //   pages: elementsSection,
-  // },
+  {
+    title: "Assignments",
+    pages: elementsSection,
+  },
   // {
   //   title: "Material App",
   //   pages: docsSection,

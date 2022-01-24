@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Clock from "../../components/Clock";
 import { Helmet } from "react-helmet-async";
 import { DUMMY_PREVIEW_DATA } from "./constants";
@@ -29,6 +30,10 @@ const styles = makeStyles({
 function Submit(props) {
   const data = DUMMY_PREVIEW_DATA;
   const classes = styles();
+  const nav = useNavigate();
+  const handleOK = () => {
+    nav("/private");
+  };
   return (
     <React.Fragment>
       <Stack spacing={6}>
@@ -72,7 +77,7 @@ function Submit(props) {
           {/* <Button variant="contained" size="large">
             Done
           </Button> */}
-          <Button variant="contained" size="large">
+          <Button onClick={handleOK} variant="contained" size="large">
             Done
           </Button>
         </div>
