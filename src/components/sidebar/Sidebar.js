@@ -76,7 +76,7 @@ const Sidebar = ({ items, showFooter = true, ...rest }) => {
   return (
     <Drawer variant="permanent" {...rest}>
       <Brand component={NavLink} to="/private">
-        <BrandIcon />{" "}
+        {/* <BrandIcon />{" "} */}
         <Box ml={1}>
           RoboProctor <BrandChip label="PRO" />
         </Box>

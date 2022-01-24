@@ -81,7 +81,7 @@ function NavbarNotificationsDropdown() {
     <React.Fragment>
       <Tooltip title="Notifications">
         <IconButton color="inherit" ref={ref} onClick={handleOpen} size="large">
-          <Indicator badgeContent={7}>
+          <Indicator badgeContent={4}>
             <Bell />
           </Indicator>
         </IconButton>
@@ -97,25 +97,20 @@ function NavbarNotificationsDropdown() {
       >
         <NotificationHeader p={2}>
           <Typography variant="subtitle1" color="textPrimary">
-            7 New Notifications
+            4 New Notifications
           </Typography>
         </NotificationHeader>
         <React.Fragment>
           <List disablePadding>
             <Notification
-              title="Update complete"
-              description="Restart server to complete update."
+              title="Upcoming Assignment"
+              description="Intro to Physics 3"
               Icon={Server}
             />
             <Notification
               title="New connection"
-              description="Anna accepted your request."
+              description="Grace accepted your request."
               Icon={UserPlus}
-            />
-            <Notification
-              title="Lorem ipsum"
-              description="Aliquam ex eros, imperdiet vulputate hendrerit et"
-              Icon={Bell}
             />
             <Notification
               title="New login"

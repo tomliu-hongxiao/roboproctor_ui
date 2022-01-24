@@ -32,7 +32,7 @@ const BigAvatar = styled(Avatar)`
 function SignIn() {
   return (
     <React.Fragment>
-      <Brand />
+      {/* <Brand /> */}
       <Wrapper>
         <Helmet title="Sign In" />
         <BigAvatar alt="Tom" src="/static/img/avatars/avatar-1.jpg" />
